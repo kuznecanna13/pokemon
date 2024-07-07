@@ -1,5 +1,7 @@
 from random import randint
 import requests
+from datetime import datetime, timedelta
+
 
 class Pokemon:
     pokemons = {}
@@ -146,6 +148,8 @@ class Pokemon:
 Сила: {self.power} (+10) /power
 
 Осталось улучшений: {self.next}"""
+    
+    
 
 class Wizard(Pokemon):
     pass

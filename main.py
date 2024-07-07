@@ -29,7 +29,7 @@ def start(message):
 def info(message):
     if message.from_user.username in Pokemon.pokemons.keys():
         pok = Pokemon.pokemons[message.from_user.username]
-        bot.reply_to(message, pok.info())
+        bot.send_message(message.chat.id, pok.info())
     else:
         bot.reply_to(message, "У вас ещё нет покемона!")
 
@@ -55,7 +55,7 @@ def feed(message):
         bot.reply_to(message, "У вас ещё нет покемона!")
     else:
         pok = Pokemon.pokemons[message.from_user.username]
-        bot.send_message(message.chat.id, pok.feed())
+        bot.send_message(message.chat.id, pok.feed())   
 
 @bot.message_handler(commands=['next'])
 def next_lvl(message):
